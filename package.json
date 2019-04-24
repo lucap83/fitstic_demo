@@ -1,0 +1,40 @@
+{
+  "name": "screeningapi",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-dev server.js",
+    "lint": "standard --fix",
+    "lab-coverage": "lab test -r html -o coverage.html --leaks -e test",
+    "lab": "lab test/*.test.js --leaks -e test",
+    "test": "knex migrate:rollback --env test && knex migrate:latest --env test && knex seed:run --env test && npm run lint && npm run lab-coverage",
+    "test-ci": "npm run lint && npm run lab",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "test-dev": "knex migrate:rollback && knex migrate:latest && knex seed:run"
+  },
+  "author": "Salvatore Niglio",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "accept-language-parser": "^1.4.1",
+    "bcrypt": "=3.0.0",
+    "code": "^5.2.4",
+    "dotenv": "^6.0.0",
+    "hapi": "^18.1.0",
+    "hapi-auth-basic": "git+https://github.com/inobeta/hapi-auth-basic.git",
+    "hapi-auth-jwt2": "^8.3.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.0",
+    "knex": "^0.16.3",
+    "lab": "^18.0.2",
+    "nodemailer": "^4.6.7",
+    "pg": "^7.4.1",
+    "sinon": "^7.2.5",
+    "standard": "^12.0.1"
+  },
+  "devDependencies": {
+    "node-dev": "^3.1.3"
+  }
+}

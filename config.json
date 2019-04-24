@@ -1,0 +1,10 @@
+{
+  "smtp": {
+    "host": "inobeta-net.mail.protection.outlook.com.",
+    "port": 25,
+    "secure": false
+  },
+  "data": {
+    "from": "noreply@inobeta.net"
+  }
+}
