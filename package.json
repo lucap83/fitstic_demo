@@ -15,7 +15,7 @@
     "seed": "knex seed:run",
     "test-dev": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
-  "author": "Salvatore Niglio",
+  "author": "Luca Palumbo",
   "license": "UNLICENSED",
   "dependencies": {
     "accept-language-parser": "^1.4.1",
